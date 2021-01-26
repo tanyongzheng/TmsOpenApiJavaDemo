@@ -155,7 +155,7 @@ public class OrderExample {
         entity.setToName("Mr Lee");
         entity.setToCompany("Test Company");
         entity.setToContact("13800138000");
-        entity.setToProvince("FL");;
+        entity.setToProvince("FL");
         entity.setToCity("Naples");
         entity.setToPostCode("34105");
         entity.setToAddress1("6859 Del Mar Terrace");
@@ -175,12 +175,13 @@ public class OrderExample {
         entity.setToName("Mr Lee");
         entity.setToCompany("Test Company");
         entity.setToContact("13800138000");
-        entity.setToProvince("FL");;
+        entity.setToProvince("FL");
         entity.setToCity("Naples");
         entity.setToPostCode("34105");
         entity.setToAddress1("6859 Del Mar Terrace");
         entity.setToAddress2("");
         entity.setWeight(0.345);
+        entity.setOverseaWarehouseCode("LAX");
 
         CreateOrderPackageInput orderPackage=new CreateOrderPackageInput();
 

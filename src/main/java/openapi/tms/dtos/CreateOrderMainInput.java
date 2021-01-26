@@ -22,6 +22,7 @@ public class CreateOrderMainInput {
     private int IsSignatureRequired;
     private int IsReject;
     private int IsBatery;
+    private String OverseaWarehouseCode;
     private List<CreateOrderPackageInput> OrderPackages;
     public void setUserId(int UserId) {
         this.UserId = UserId;
@@ -156,4 +157,11 @@ public class CreateOrderMainInput {
         return OrderPackages;
     }
 
+    public String getOverseaWarehouseCode() {
+        return OverseaWarehouseCode;
+    }
+
+    public void setOverseaWarehouseCode(String overseaWarehouseCode) {
+        OverseaWarehouseCode = overseaWarehouseCode;
+    }
 }
