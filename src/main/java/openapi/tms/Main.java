@@ -7,6 +7,7 @@ public class Main {
         //ChannelExample.GetAllChannel();
         //OrderExample.GetTrackNo();
         //OrderExample.CheckAddress();
-        OrderExample.CreateOrder();
+        //OrderExample.CreateOrder();
+        OrderExample.CheckAddress();
     }
 }

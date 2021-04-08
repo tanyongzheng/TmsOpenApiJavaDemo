@@ -66,7 +66,7 @@ public class OrderExample {
 
 
     public static void CheckAddress(){
-        String jsonParams=CheckAddressModelToJson();
+        String jsonParams=CheckAddressModelToJson3();
         String url = APIConfig._APIURL + "Order/CheckAddress";
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         HttpPost httpPost = new HttpPost(url);
@@ -165,6 +165,41 @@ public class OrderExample {
         return json;
     }
 
+    private static String CheckAddressModelToJson2(){
+
+        CheckAddressInput entity = new CheckAddressInput();
+
+        entity.setChannelCode("USPSABC1");  // 渠道代码
+        entity.setToCountryCode("US");
+        entity.setToName("Eric Cazin");
+        entity.setToCompany("");
+        entity.setToContact("");
+        entity.setToProvince("LAS CRUCES");
+        entity.setToCity("LAS CRUCES");
+        entity.setToPostCode("88005");
+        entity.setToAddress1("5503 N  HIGHWAY 28  LAS CRUCES, NEW MEXICO  88005-6213   USA LAS CRUCES LAS CRUCES");
+        entity.setToAddress2("");
+        String json= JSON.toJSONString(entity);
+
+        return json;
+    }
+
+    private static String CheckAddressModelToJson3(){
+        String json= "{\n" +
+                "\t\"ToName\": \"Eric Cazin\",\n" +
+                "\t\"ToCompany\": \"\",\n" +
+                "\t\"ToCountryCode\": \"US\",\n" +
+                "\t\"ToAddress1\": \"5503 N  HIGHWAY 28  LAS CRUCES, NEW MEXICO  88005-6213   USA LAS CRUCES LAS CRUCES\",\n" +
+                "\t\"ToAddress2\": \"\",\n" +
+                "\t\"ToProvince\": \"LAS CRUCES\",\n" +
+                "\t\"ToCity\": \"LAS CRUCES\",\n" +
+                "\t\"ToPostCode\": \"88005\",\n" +
+                "\t\"ToContact\": \"\",\n" +
+                "\t\"ChannelCode\": \"USPSABC1\"\n" +
+                "}";
+        return json;
+    }
+
     private static String CreateOrderModelToJson(){
 
         CreateOrderMainInput entity = new CreateOrderMainInput();
@@ -182,6 +217,8 @@ public class OrderExample {
         entity.setToAddress2("");
         entity.setWeight(0.345);
         entity.setOverseaWarehouseCode("LAX");
+        entity.setToDocumentType("CPF");
+        entity.setToDocumentNumber("00123456001");
 
         CreateOrderPackageInput orderPackage=new CreateOrderPackageInput();
 

@@ -24,6 +24,26 @@ public class CreateOrderMainInput {
     private int IsBatery;
     private String OverseaWarehouseCode;
     private List<CreateOrderPackageInput> OrderPackages;
+    private String ToDocumentType;
+    private String ToDocumentNumber;
+
+    public String getToDocumentNumber() {
+        return ToDocumentNumber;
+    }
+
+    public void setToDocumentNumber(String toDocumentNumber) {
+        ToDocumentNumber = toDocumentNumber;
+    }
+
+    public String getToDocumentType() {
+        return ToDocumentType;
+    }
+
+    public void setToDocumentType(String toDocumentType) {
+        ToDocumentType = toDocumentType;
+    }
+
+
     public void setUserId(int UserId) {
         this.UserId = UserId;
     }
